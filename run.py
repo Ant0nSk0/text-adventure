@@ -75,6 +75,7 @@ def act1():
                 print("Might be valuable. Or magic. Seems important.")
                 print("Something about the item has you enchanted")
                 print("and you start to lose touch with reality..")
+                act2()
             elif answer3.lower() == "no":
                 print("You refuse the gift, clearly upsetting the figure")
                 slow_print("..You were supposed to be the one..\n"
@@ -103,6 +104,28 @@ def act1():
     else:
         print("Please enter either yes or no")
         act1()
+
+
+def act2():
+    """
+    The second act of the game
+    """
+    print()
+    print("You wake up all of a sudden with a gasp. It's no longer dark.")
+    print("Confused about what just happened, you look around you")
+    print("and wonder where to go and what to do next\n")
+    print("Do you want to go deeper into the forest or head to town?")
+    answer = input("[forest/town]\n")
+    if answer.lower() == "forest":
+        print("You decide to go deeper into the forest")
+        print("It quickly gets dark again and you start to lose clarity")
+        print("Your mind runs away from you and all turns black")
+        act2()
+    elif answer.lower() == "town":
+        print("you go to town")
+    else:
+        print("Not possible. Try again")
+        act2()
 
 
 # run game

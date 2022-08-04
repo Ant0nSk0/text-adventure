@@ -151,6 +151,7 @@ def act2():
                     slow_print("..heh heh cheers. now, have a drink.\n")
                     slow_print("..Then go 'round back, ask for Griff\n")
                     p1.griff = True
+                    act3()
                 elif answer4.lower() == "no":
                     print()
                     slow_print("..Cheap are we?\n")
@@ -198,6 +199,39 @@ def act2():
     else:
         print("Not possible. Try again")
         act2()
+
+
+def act3():
+    """
+    The third act of the game
+    """
+    print()
+    time.sleep(1.5)
+    print("As you go out back, you see a short little creature")
+    print("Green skin, long nose, long ears. Cursing like a sailor")
+    print("You reckon it's a goblin\n")
+    time.sleep(1.5)
+    print("The goblin seems to be going through some bags and boxes")
+    print("Frantically digging through it's contents\n")
+    if p1.griff:
+        print("[griff]: Ask if the goblin is called Griff or if he knows him")
+    elif not p1.griff:
+        print("[ask]: 'Is everything in order here?'")
+    print("[fight]: This creature seem to be up to no good, I must fight!")
+    answer = input("How will you approach the creature?\n")
+    if answer.lower() == "griff":
+        print()
+        print("The goblin jumps up, as frightened by the name")
+    elif answer.lower() == "ask":
+        print()
+        print("The goblin shakes his head")
+    elif answer.lower() == "fight":
+        print()
+        time.sleep(1)
+        print("You prepare yourself to fight the creature, charging forward")
+        print("The goblin however turns around faster than you can blink")
+        print("A dagger comes flying and hits you right between the eyes")
+        death()
 
 
 # run game

@@ -212,8 +212,8 @@ def act2b():
     """
     print()
     print("The strange man takes out a pair of dice, asking to play")
-    playdice = input("Would you like to play som dice?\n")
-    while playdice.lower() == "yes":
+    play_dice = input("Would you like to play som dice?\n")
+    while play_dice.lower() == "yes":
         die1 = random.randrange(1, 7)
         die2 = random.randrange(1, 7)
         print("Let's play, highest number wins.\n")
@@ -234,9 +234,24 @@ def act2b():
         else:
             print("It's a draw")
         print()
-        playdice = input('Play again?\n')
-        if playdice.lower() == "no":
-            print("You decide that's enough for now")
+        play_dice = input('Play again?\n')
+        if play_dice.lower() == "no":
+            print("You decide that's enough for now so you stand up")
+            print("The stranger smiles and says:")
+            print()
+            slow_print(f"..Very well {p1.name}..")
+            slow_print("..I trust you have more important things to do\n")
+            slow_print("..This time we rolled just for fun..\n")
+            slow_print("..Next time you play, things might be different..\n")
+            slow_print("..But before then, you should take this with you\n")
+            slow_print("..You never know when you'll need some extra luck\n")
+            print()
+            print("After accepting the die, you decide to go out the backdoor")
+            p1.lucky_dice = True
+            act3()
+    print("You decide you don't have time for this.")
+    print("Ignoring the stranger you leave via the back door")
+    act3()
 
 
 def act3():

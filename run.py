@@ -136,6 +136,50 @@ def act2():
             time.sleep(1)
             slow_print("...and you are?\n")
             print("he says, placing a bottle of rum upon the bar")
+            print()
+            time.sleep(1)
+            print("[a]: Tell the barkeep your name and ask for information")
+            print("[b]: Say nothing. Grab the bottle. Pay and go sit down.")
+            answer3 = input("How do you answer?\n")
+            if answer3.lower() == "a":
+                print()
+                slow_print(f"...{p1.name}, huh? Lookin' for information hm?\n")
+                slow_print("...heh Well that'll cost ya..\n")
+                answer4 = input("Pay the barkeeper?\n [yes/no]\n")
+                if answer4.lower() == "yes":
+                    print()
+                    slow_print("..heh heh cheers. now, have a drink.\n")
+                    slow_print("..Then go 'round back, ask for Griff\n")
+                    p1.griff = True
+                elif answer4.lower() == "no":
+                    print()
+                    slow_print("..Cheap are we?\n")
+                    time.sleep(1.5)
+                    print("BOYS!")
+                    print("Suddenly a wooden plank connects to "
+                          "the back of your skull")
+                    print("Everything turns black")
+                    death()
+                else:
+                    print()
+                    print("Somehow you insulted the barkeep")
+                    print("Before you know it, a whistle and a swing")
+                    print("Bat to the back and everything turns black")
+                    death()
+            elif answer3.lower() == "b":
+                print()
+                print("You go sit down, having a drink, looking around")
+                print("You keep scanning the room with your eyes")
+                print("You notice strange noises from a beyond a back door")
+                print("But before you can get up and investigate,")
+                print(" a stranger takes a seat across from you.")
+            else:
+                print()
+                print("Somehow you insulted the barkeep")
+                print("Before you know it, a whistle and a swing")
+                print("A bat to the back and everything turns black")
+                death()
+
         elif answer2.lower == "market":
             print()
             print("you went to the market\n")

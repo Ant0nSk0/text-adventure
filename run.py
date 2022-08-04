@@ -62,6 +62,7 @@ def act1():
     answer = input("Do you answer the voice? [yes/no]\n")
     if answer.lower() == "yes":
         print("You answer the voice and get nothing but silence in return.")
+        time.sleep(1.5)
         print("A dark figure appears in the distance.")
         answer2 = input("Do you approach the figure? [yes/no]\n")
         if answer2.lower() == "yes":
@@ -122,6 +123,7 @@ def act2():
         print("Your mind runs away from you and all turns black")
         act2()
     elif answer.lower() == "town":
+        print()
         print("You head towards the town")
         print("The town before you is in very bad shape.")
         print("You decide to try and find some locals")
@@ -210,9 +212,10 @@ def act3():
     print("As you go out back, you see a short little creature")
     print("Green skin, long nose, long ears. Cursing like a sailor")
     print("You reckon it's a goblin\n")
-    time.sleep(1.5)
+    time.sleep(2)
     print("The goblin seems to be going through some bags and boxes")
     print("Frantically digging through it's contents\n")
+    time.sleep(2)
     if p1.griff:
         print("[griff]: Ask if the goblin is called Griff or if he knows him")
     elif not p1.griff:
@@ -221,7 +224,40 @@ def act3():
     answer = input("How will you approach the creature?\n")
     if answer.lower() == "griff":
         print()
-        print("The goblin jumps up, as frightened by the name")
+        print("The goblin jumps up, startled by hearing his name")
+        time.sleep(1)
+        slow_print("..oh yes yes, Griff is my name.\n")
+        slow_print("..But that's not for you to know now, who told you?\n")
+        slow_print("..oh I bet it was that ol' bastard behind the bar\n")
+        slow_print("..He keeps selling me out.\n")
+        time.sleep(1.5)
+        print()
+        print("..And I won't see half of the coin he took, I bloody know it\n")
+        time.sleep(2)
+        slow_print(".. oh well..\n")
+        slow_print("..Half of something is still better than all of nothing\n")
+        slow_print("Now what do you want?\n")
+        print()
+        print("[a]: Ask about the medallion")
+        print("[b]: Ask about the forest")
+        answer2 = input("What do you ask Griff?\n")
+        if answer2.lower() == "a":
+            print()
+            print("You pull out the medallion to show him\n")
+            print("..ARE YOU MAD? DO YOU HAVE A DEATHWISH? PUT IT AWAY")
+            slow_print("..quickly now, follow me.. we'll talk in private")
+            act4()
+        elif answer2.lower() == "b":
+            print()
+            print("You ask about the forest and tell Griff about the figure")
+            print("The goblin scratches his head, and looks around nervously")
+            slow_print("..We can't talk here, come, follow me.")
+            act4()
+        else:
+            print()
+            print("While trying to speak your mind, bandits approached")
+            print("Griff managed to escape. You however....")
+            death()
     elif answer.lower() == "ask":
         print()
         print("The goblin shakes his head")
@@ -232,6 +268,17 @@ def act3():
         print("The goblin however turns around faster than you can blink")
         print("A dagger comes flying and hits you right between the eyes")
         death()
+    else:
+        print("Not an option Try again")
+        act3()
+
+
+def act4():
+    """
+    Fourth act of the game
+    """
+    print()
+    print("You follow Griff into a hidden passsage below a crypt")
 
 
 # run game

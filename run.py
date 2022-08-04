@@ -55,15 +55,49 @@ def act1():
     The first act of the game
     """
     print()
-    print("Leaving the safety of your home, your journey begins")
-    print("You enter a dark forest, struggling to see the path before you")
-    print("Suddenly, a voice cries out from the dark")
+    print("Leaving the safety of your home, your journey begins.")
+    print("You enter a dark forest, struggling to see the path before you.")
+    print("Suddenly, a voice cries out from the dark.")
     slow_print(f"..is that.. ..is that you {p1.name}?\n")
     answer = input("Do you answer the voice? [yes/no]\n")
     if answer.lower() == "yes":
-        print("You answer the voice and get nothing but silence in return")
+        print("You answer the voice and get nothing but silence in return.")
+        print("A dark figure appears in the distance.")
+        answer2 = input("Do you approach the figure? [yes/no]\n")
+        if answer2.lower() == "yes":
+            print("You approach the figure.")
+            print("There is something familiar about it.")
+            print("The figure reaches out its hand to give you something.")
+            answer3 = input("Do you accept the gift? [yes/no]\n")
+            if answer3.lower() == "yes":
+                print("You accept the gift.")
+                print("It appears to be a medallion of sort")
+                print("Might be valuable. Or magic. Seems important.")
+                print("Something about the item has you enchanted")
+                print("and you start to lose touch with reality..")
+            elif answer3.lower() == "no":
+                print("You refuse the gift, clearly upsetting the figure")
+                slow_print("..You were supposed to be the one..\n"
+                           "..you were supposed to save me..\n")
+                print("The figure disappears as you feel a terrible chill")
+                print("Slowly all life fades away")
+                death()
+            else:
+                print("You hesitate and utter something incoherent.")
+                print("The figure lost all hope and left you to die")
+                death()
+        elif answer2.lower() == "no":
+            print("You decide to turn around and go the other way")
+            print("Trying to outrun the evils of the forest,"
+                  " you trip and fall")
+            print("It's too late.. ")
+            death()
+        else:
+            print("You seem confused.")
+            print("The figure shakes its head and leaves you for dead")
+            death()
     elif answer.lower() == "no":
-        print("You ignore the voice and keep walking")
+        print("You ignore the voice and keep walking.")
         print("Suddenly the air grows cold and your body frozen in place.")
         death()
     else:

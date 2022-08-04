@@ -1,5 +1,6 @@
 import time
 import sys
+import random
 
 
 class Player:
@@ -176,6 +177,7 @@ def act2():
                 print("You notice strange noises from a beyond a back door")
                 print("But before you can get up and investigate,")
                 print(" a stranger takes a seat across from you.")
+                act2b()
             else:
                 print()
                 print("Somehow you insulted the barkeep")
@@ -201,6 +203,40 @@ def act2():
     else:
         print("Not possible. Try again")
         act2()
+
+
+def act2b():
+    """
+    Alternative path from act2 to act3
+    Gives the player a dice rolling minigame
+    """
+    print()
+    print("The strange man takes out a pair of dice, asking to play")
+    playdice = input("Would you like to play som dice?\n")
+    while playdice.lower() == "yes":
+        die1 = random.randrange(1, 7)
+        die2 = random.randrange(1, 7)
+        print("Let's play, highest number wins.\n")
+        print("Stranger:")
+        print(f"  +---+\n"
+              f"  | {die2} |\n"
+              f"  +---+")
+        print()
+        print(f"{p1.name}:")
+        print(f"  +---+\n"
+              f"  | {die1} |\n"
+              f"  +---+")
+        print()
+        if die1 > die2:
+            print(f"{p1.name} wins")
+        elif die2 > die1:
+            print("Stranger wins")
+        else:
+            print("It's a draw")
+        print()
+        playdice = input('Play again?\n')
+        if playdice.lower() == "no":
+            print("You decide that's enough for now")
 
 
 def act3():
@@ -236,7 +272,7 @@ def act3():
         time.sleep(2)
         slow_print(".. oh well..\n")
         slow_print("..Half of something is still better than all of nothing\n")
-        slow_print("Now what do you want?\n")
+        slow_print("..Now what do you want?\n")
         print()
         print("[a]: Ask about the medallion")
         print("[b]: Ask about the forest")

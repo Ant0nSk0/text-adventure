@@ -247,10 +247,17 @@ def act2b():
             slow_print("..You never know when you'll need some extra luck\n")
             print()
             print("After accepting the die, you decide to go out the backdoor")
+            time.sleep(1.5)
             p1.lucky_dice = True
             act3()
+        else:
+            print("You decide you don't have time for this.")
+            print("Ignoring the stranger you leave via the back door")
+            time.sleep(1.5)
+            act3()
     print("You decide you don't have time for this.")
-    print("Ignoring the stranger you leave via the back door")
+    print("Ignoring the stranger you head for the backdoor")
+    time.sleep(1.5)
     act3()
 
 

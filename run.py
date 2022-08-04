@@ -22,6 +22,15 @@ def slow_print(text):
         time.sleep(0.1)
 
 
+def death():
+    """
+    Game over message.
+    """
+    print()
+    print(f"This journey ends here. Better luck next time, {p1.name}\n")
+    new_game()
+
+
 def new_game():
     """
     Starts the game
@@ -45,6 +54,7 @@ def act1():
     """
     The first act of the game
     """
+    print()
     print("Leaving the safety of your home, your journey begins")
     print("You enter a dark forest, struggling to see the path before you")
     print("Suddenly, a voice cries out from the dark")
@@ -55,6 +65,7 @@ def act1():
     elif answer.lower() == "no":
         print("You ignore the voice and keep walking")
         print("Suddenly the air grows cold and your body frozen in place.")
+        death()
     else:
         print("Please enter either yes or no")
         act1()

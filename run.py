@@ -4,7 +4,7 @@ Text Adventure Game
 import time
 import sys
 import random
-from colorama import Fore, init
+from colorama import init, Fore
 
 
 init(autoreset=True)
@@ -47,7 +47,7 @@ def new_game():
     """
     Starts the game
     """
-    print("Start new game?")
+    print(Fore.GREEN + "Start new game?")
     answer = input("[yes/no]\n")
     if answer.lower() == "yes":
         print("\n"*24)
@@ -229,7 +229,7 @@ def act2b():
     """
     print()
     print("The strange man takes out a pair of dice, asking to play")
-    play_dice = input("Would you like to play som dice?\n")
+    play_dice = input("Would you like to play som dice?[yes/no]\n")
     if play_dice.lower() == "yes":
         play = True
         while play:
@@ -253,7 +253,7 @@ def act2b():
             else:
                 print("It's a draw")
             print()
-            play_dice = input('Play again?\n')
+            play_dice = input('Play again? [yes/no]\n')
             if play_dice.lower() == "no":
                 play = False
                 print("You decide that's enough for now so you stand up")

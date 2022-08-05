@@ -1,3 +1,6 @@
+"""
+Text Adventure Game
+"""
 import time
 import sys
 import random
@@ -473,6 +476,11 @@ def finale():
         print()
         print("It seems you rolled a six, beating the dark spirit")
         print("The dark spirit gets upset, but honors his deal")
+        print("You and the freed spirits flee the forest\n")
+        time.sleep(2)
+        print("That's enough adventure for now")
+        print("The dark spirit still haunts the forest")
+        print("But no one enters without a good lucky die\n")
         the_end()
     elif answer.lower() == "griff":
         print()
@@ -497,6 +505,11 @@ def finale():
         elif die1 == 6:
             print("It seems you rolled a six, beating the dark spirit")
             print("The dark spirit gets upset, but honors his deal")
+            print("You and the freed spirits flee the forest\n")
+            time.sleep(2)
+            print("That's enough adventure for now")
+            print("The dark spirit still haunts the forest")
+            print("But no one enters without a good lucky die\n")
             the_end()
     elif answer.lower() == "spirit":
         print()
@@ -509,7 +522,7 @@ def finale():
         death()
 
 
-# run game
+# Intro + Run Game
 print("                ##############################################")
 print("                #          WELCOME TO THE ADVENTURE          #")
 print("                ##############################################")

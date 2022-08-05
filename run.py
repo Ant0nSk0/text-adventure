@@ -303,13 +303,15 @@ def act3():
             print()
             print("You pull out the medallion to show him\n")
             print("..ARE YOU MAD? DO YOU HAVE A DEATHWISH? PUT IT AWAY")
-            slow_print("..quickly now, follow me.. we'll talk in private")
+            slow_print("..quickly now, follow me.. we'll talk in private\n")
+            time.sleep(2)
             act4()
         elif answer2.lower() == "b":
             print()
             print("You ask about the forest and tell Griff about the figure")
             print("The goblin scratches his head, and looks around nervously")
-            slow_print("..We can't talk here, come, follow me.")
+            slow_print("..We can't talk here, come, follow me.\n")
+            time.sleep(2)
             act4()
         else:
             print()
@@ -351,7 +353,6 @@ def act3():
             print("He then proceeds to loot all your coin and belongings")
             slow_print("..sorry pal..")
             death()
-
     elif answer.lower() == "fight":
         print()
         time.sleep(1)
@@ -369,7 +370,28 @@ def act4():
     Fourth act of the game
     """
     print()
-    print("You follow Griff into a hidden passsage below a crypt")
+    time.sleep(1)
+    print("You follow Griff into a hidden passage below a crypt")
+    print("Far below ground you reach a large room")
+    time.sleep(1)
+    print("You proceed to tell Griff everything about what happened\n")
+    slow_print("..The medallion connects you to that spirit\n")
+    print()
+    print("..hm.. The way i see it, you have two options\n")
+    time.sleep(2)
+    slow_print("..Either you perform the ritual, at a risk\n")
+    slow_print("..Or you give it to me. I'll sell it off\n")
+    slow_print("..Just transfer some magic stuff. Easy. I'll make good coin\n")
+    print()
+    print("What will you do?")
+    answer = input("[a]: Perform the ritual. [b]: give medallion to Griff\n")
+    if answer.lower() == "a":
+        print()
+    elif answer.lower() == "b":
+        print()
+    else:
+        print()
+        act4()
 
 
 # run game

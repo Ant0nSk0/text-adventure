@@ -455,9 +455,50 @@ def finale():
         print("Griff offers you his dice, it's just plain normal")
         print("Use Griffs die? [griff]")
     print("The dark spirit provides a die as well [spirit]")
-    answer = input("Which die will you use?")
+    answer = input("Which die will you use?\n")
     if answer.lower() == "luck":
         print()
+        print("You throw the lucky die the stranger gave you")
+        print("  +---+\n"
+              "  | 6 |\n"
+              "  +---+")
+        print()
+        print("It seems you rolled a six, beating the dark spirit")
+        print("The dark spirit gets upset, but honors his deal")
+        the_end()
+    elif answer.lower() == "griff":
+        print()
+        die1 = random.randrange(1, 7)
+        print("you throw the die that Griff gave you")
+        print(f"  +---+\n"
+              f"  | {die1} |\n"
+              f"  +---+\n")
+        print(f"You rolled {die1}")
+        while die1 == 5:
+            die1 = random.randrange(1, 7)
+            print("We'll roll again")
+            print("Spirit got 5 again")
+            print()
+            print(f"  +---+\n"
+                  f"  | {die1} |\n"
+                  f"  +---+\n")
+            print(f"you rolled {die1}")
+        if die1 < 5:
+            print("The dark spirit smiles and everything turns black")
+            death()
+        elif die1 == 6:
+            print("It seems you rolled a six, beating the dark spirit")
+            print("The dark spirit gets upset, but honors his deal")
+            the_end()
+    elif answer.lower() == "spirit":
+        print()
+        print("You throw the die that the spirit gave you")
+        print("  +---+\n"
+              "  | 1 |\n"
+              "  +---+\n")
+        slow_print("oh my.. This isn't good..\n")
+        print("The dark spirit smiles and everything turns black")
+        death()
 
 
 # run game

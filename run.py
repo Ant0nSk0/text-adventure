@@ -42,6 +42,7 @@ def new_game():
     print("Start new game?")
     answer = input("[yes/no]\n")
     if answer.lower() == "yes":
+        print("\n"*24)
         print("Great! Let us begin!")
         p1.name = input("Please enter your name:\n")
         p1.griff = False
@@ -63,6 +64,7 @@ def act1():
     print("You enter a dark forest, struggling to see the path before you.")
     print("Suddenly, a voice cries out from the dark.")
     slow_print(f"..is that.. ..is that you {p1.name}?\n")
+    print()
     answer = input("Do you answer the voice? [yes/no]\n")
     if answer.lower() == "yes":
         print()
@@ -340,8 +342,8 @@ def act3():
             print()
             print("You tell about what you experienced in the forest")
             print("You ask if he knows anything about it")
-            print("He introduces himself as Griff and says:")
-            slow_print("..Follow me, we must talk in private")
+            print("He introduces himself as Griff and says:\n")
+            slow_print("..Follow me, we must talk in private\n")
             act4()
         elif answer3 == "b":
             print()
@@ -508,4 +510,16 @@ def finale():
 
 
 # run game
+print("                ##############################################")
+print("                #          WELCOME TO THE ADVENTURE          #")
+print("                ##############################################")
+print()
+time.sleep(2)
+print("We find ourselves in dangerous times, evil spirits haunt the forest,")
+print("People have gone missing, poverty and crime is everywhere")
+print("Death lurks around every corner.\n")
+print("In search for a lost loved one, for coin or to put an end to this evil")
+print("Our hero (that's you!) starts their journey towards death or glory\n")
+slow_print("                          --- GOOD LUCK! ---\n")
+print()
 new_game()

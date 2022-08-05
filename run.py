@@ -391,7 +391,8 @@ def act4():
     print("You follow Griff into a hidden passage below a crypt")
     print("Far below ground you reach a large room")
     time.sleep(1)
-    print("You proceed to tell Griff everything about what happened\n")
+    print("You proceed to tell him everything about what happened")
+    print("Griff thinks deeply for a bit, then responds:\n")
     slow_print("..The medallion connects you to that spirit\n")
     print()
     print("..hm.. The way i see it, you have two options\n")
@@ -436,6 +437,7 @@ def the_end():
     print(f"This story has come to an end. Well done {p1.name}!")
     print("However, there's more to this story. Other paths to take.")
     print("Feel free to play again, and see how it ends next time\n")
+    print()
     print(Fore.YELLOW + "                     #########################")
     print(Fore.YELLOW + "                     # Thank you for playing #")
     print(Fore.YELLOW + "                     #########################")
@@ -530,7 +532,9 @@ def finale():
 # Intro + Run Game
 print(Fore.YELLOW +
       "                ##############################################\n"
+      "                #                                            #\n"
       "                #          WELCOME TO THE ADVENTURE          #\n"
+      "                #                                            #\n"
       "                ##############################################")
 print()
 time.sleep(2)

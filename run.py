@@ -436,9 +436,9 @@ def the_end():
     print(f"This story has come to an end. Well done {p1.name}!")
     print("However, there's more to this story. Other paths to take.")
     print("Feel free to play again, and see how it ends next time\n")
-    print("#########################")
-    print("# Thank you for playing #")
-    print("#########################")
+    print(Fore.BLUE + "                     #########################")
+    print(Fore.BLUE + "                     # Thank you for playing #")
+    print(Fore.BLUE + "                     #########################")
     time.sleep(4)
     new_game()
 
@@ -528,16 +528,18 @@ def finale():
 
 
 # Intro + Run Game
-print("                ##############################################")
-print("                #          WELCOME TO THE ADVENTURE          #")
-print("                ##############################################")
+print(Fore.BLUE +
+      "                ##############################################\n"
+      "                #          WELCOME TO THE ADVENTURE          #\n"
+      "                ##############################################")
 print()
 time.sleep(2)
+print("\n")
 print("We find ourselves in dangerous times, evil spirits haunt the forest,")
 print("People have gone missing, poverty and crime is everywhere")
 print("Death lurks around every corner.\n")
 print("In search for a lost loved one, for coin or to put an end to this evil")
 print("Our hero (that's you!) starts their journey towards death or glory\n")
-slow_print("                          --- GOOD LUCK! ---\n")
+slow_print("                             --- GOOD LUCK! ---\n")
 print()
 new_game()

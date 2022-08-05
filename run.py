@@ -389,9 +389,33 @@ def act4():
         print()
     elif answer.lower() == "b":
         print()
+        print("You decide to hand it over to griff for him to sell.")
+        print("This has been enough adventuring for you.")
+        print("Sometimes, some things are better left unknown\n")
+        time.sleep(2)
+        print("You decide to go home and forget about the whole thing")
+        time.sleep(2)
+        print("You can't even remember why you left to begin with\n")
+        print("...Was there a princess to be saved? Coin to be had?")
+        print("Evil to be banished? Answers to what questions?\n")
+        time.sleep(2)
+        print("No matter. Not your problem anymore. Go home and rest")
+        the_end()
     else:
         print()
         act4()
+
+
+def the_end():
+    print()
+    print(f"This story has come to an end. Well done {p1.name}!")
+    print("However, there's more to this story. Other paths to take.")
+    print("Feel free to play again, and see how it ends next time\n")
+    print("#########################")
+    print("# Thank you for playing #")
+    print("#########################")
+    time.sleep(4)
+    new_game()
 
 
 # run game

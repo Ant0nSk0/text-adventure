@@ -4,6 +4,10 @@ Text Adventure Game
 import time
 import sys
 import random
+from colorama import Fore, init
+
+
+init(autoreset=True)
 
 
 class Player:
@@ -34,6 +38,7 @@ def death():
     Game over message.
     """
     print()
+    print(Fore.RED + "  --GAME OVER--\n")
     print(f"This journey ends here. Better luck next time, {p1.name}\n")
     new_game()
 

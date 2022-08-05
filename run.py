@@ -436,9 +436,9 @@ def the_end():
     print(f"This story has come to an end. Well done {p1.name}!")
     print("However, there's more to this story. Other paths to take.")
     print("Feel free to play again, and see how it ends next time\n")
-    print(Fore.BLUE + "                     #########################")
-    print(Fore.BLUE + "                     # Thank you for playing #")
-    print(Fore.BLUE + "                     #########################")
+    print(Fore.YELLOW + "                     #########################")
+    print(Fore.YELLOW + "                     # Thank you for playing #")
+    print(Fore.YELLOW + "                     #########################")
     time.sleep(4)
     new_game()
 
@@ -528,7 +528,7 @@ def finale():
 
 
 # Intro + Run Game
-print(Fore.BLUE +
+print(Fore.YELLOW +
       "                ##############################################\n"
       "                #          WELCOME TO THE ADVENTURE          #\n"
       "                ##############################################")

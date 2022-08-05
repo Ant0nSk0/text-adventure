@@ -62,16 +62,18 @@ def act1():
     slow_print(f"..is that.. ..is that you {p1.name}?\n")
     answer = input("Do you answer the voice? [yes/no]\n")
     if answer.lower() == "yes":
+        print()
         print("You answer the voice and get nothing but silence in return.")
-        time.sleep(1.5)
         print("A dark figure appears in the distance.")
         answer2 = input("Do you approach the figure? [yes/no]\n")
         if answer2.lower() == "yes":
+            print()
             print("You approach the figure.")
             print("There is something familiar about it.")
             print("The figure reaches out its hand to give you something.")
             answer3 = input("Do you accept the gift? [yes/no]\n")
             if answer3.lower() == "yes":
+                print()
                 print("You accept the gift.")
                 print("It appears to be a medallion of sort")
                 print("Might be valuable. Or magic. Seems important.")
@@ -387,19 +389,23 @@ def act4():
     answer = input("[a]: Perform the ritual. [b]: give medallion to Griff\n")
     if answer.lower() == "a":
         print()
+        print("You decide to perform the ritual")
+        print("Griff nods and starts to gather some supplies")
+        slow_print("..Back into the forest we go.. \n")
+        slow_print("..The medallion won't protect you once we start..\n")
+        finale()
     elif answer.lower() == "b":
         print()
-        print("You decide to hand it over to griff for him to sell.")
+        print("You decide to hand it over to Griff for him to sell.")
         print("This has been enough adventuring for you.")
-        print("Sometimes, some things are better left unknown\n")
         time.sleep(2)
         print("You decide to go home and forget about the whole thing")
         time.sleep(2)
         print("You can't even remember why you left to begin with\n")
         print("...Was there a princess to be saved? Coin to be had?")
-        print("Evil to be banished? Answers to what questions?\n")
+        print("Evil to be banished? No matter. \n")
+        print("Not your problem anymore. Go home and rest")
         time.sleep(2)
-        print("No matter. Not your problem anymore. Go home and rest")
         the_end()
     else:
         print()
@@ -407,6 +413,9 @@ def act4():
 
 
 def the_end():
+    """
+    The End message
+    """
     print()
     print(f"This story has come to an end. Well done {p1.name}!")
     print("However, there's more to this story. Other paths to take.")
@@ -416,6 +425,39 @@ def the_end():
     print("#########################")
     time.sleep(4)
     new_game()
+
+
+def finale():
+    """
+    Final Act of the game
+    """
+    print()
+    time.sleep(2)
+    print("You enter the forest once again to prepare the ritual")
+    print("Griff starts to draw a circle on the ground")
+    print("Chanting some spell, that suddenly changes tone..")
+    print("Into a conversation in a dead language..\n")
+    time.sleep(2)
+    print("Griff turns to you and start to speak:")
+    slow_print("..sooo, this is going to sound silly, but..\n")
+    slow_print("..in order to free our spirit, and now us, I guess..\n")
+    slow_print("..you have to play a game against the dark spirit here.\n")
+    slow_print("..That's his terms, I guess he's lonely or something..\n")
+    print("..anyway. simple stuff..")
+    slow_print("..Roll the die and hope not to, you know, die..\n")
+    print()
+    time.sleep(2)
+    print("The dark spirit rolls first. He rolls a 5.")
+    if p1.lucky_dice:
+        print("You remembered the lucky die the stranger gave you")
+        print("Use the lucky dice? [luck]")
+    elif p1.griff:
+        print("Griff offers you his dice, it's just plain normal")
+        print("Use Griffs die? [griff]")
+    print("The dark spirit provides a die as well [spirit]")
+    answer = input("Which die will you use?")
+    if answer.lower() == "luck":
+        print()
 
 
 # run game

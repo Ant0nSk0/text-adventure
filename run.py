@@ -13,12 +13,15 @@ class Player:
         self.lucky_dice = lucky_dice
 
 
+p1 = Player('', False, False)
+
+
 def slow_print(text):
     """
     Slower print for speech
     """
-    for c in text:
-        print(c, end='')
+    for char in text:
+        print(char, end='')
         sys.stdout.flush()
         time.sleep(0.1)
 
@@ -40,9 +43,9 @@ def new_game():
     answer = input("[yes/no]\n")
     if answer.lower() == "yes":
         print("Great! Let us begin!")
-        name = input("Please enter your name:\n")
-        global p1
-        p1 = Player(name, False, False)
+        p1.name = input("Please enter your name:\n")
+        p1.griff = False
+        p1.lucky_dice = False
         act1()
     elif answer.lower() == "no":
         print("Shame. Maybe another time. Good bye.")
@@ -74,11 +77,13 @@ def act1():
             answer3 = input("Do you accept the gift? [yes/no]\n")
             if answer3.lower() == "yes":
                 print()
-                print("You accept the gift.")
+                print("You accept the gift.\n")
+                time.sleep(1)
                 print("It appears to be a medallion of sort")
                 print("Might be valuable. Or magic. Seems important.")
                 print("Something about the item has you enchanted")
                 print("and you start to lose touch with reality..")
+                time.sleep(2)
                 act2()
             elif answer3.lower() == "no":
                 print("You refuse the gift, clearly upsetting the figure")
@@ -135,7 +140,7 @@ def act2():
         if answer2.lower() == "tavern":
             print()
             print("You find an old tavern, with a few locals in it\n")
-            time.sleep(0.5)
+            time.sleep(1)
             print("The air reeks of smoke and booze, sweat and despair.")
             print("The barkeep glares at you as the room fills with silence\n")
             time.sleep(1)
@@ -190,7 +195,7 @@ def act2():
         elif answer2.lower == "market":
             print()
             print("you went to the market\n")
-            time.sleep(0.5)
+            time.sleep(1)
             print("Theres not much people around. It's very silent")
             print("Almost too silent...")
             print("Before you know it you get ambushed by a group of bandits")
@@ -198,7 +203,7 @@ def act2():
             death()
         else:
             print("You have trouble making a decent decision\n")
-            time.sleep(0.5)
+            time.sleep(1)
             print("Staying idle in this town is a very bad idea")
             print("Before you know it, bandits ambush you. You have no chance")
             death()
@@ -252,7 +257,7 @@ def act2b():
                     "..You never know when you'll need some extra luck\n")
                 print()
                 print(
-                    "After accepting the die, you decide to go out the back")
+                    "After accepting the dice, you decide to go out the back")
                 time.sleep(1.5)
                 p1.lucky_dice = True
                 act3()
@@ -322,12 +327,12 @@ def act3():
             death()
     elif answer.lower() == "ask":
         print()
-        print("The goblin shakes his head")
+        print("The goblin shakes his head\n")
         slow_print("..Nothing is in order in this land..\n")
         slow_print("..Look, I got a business here..\n")
         slow_print("..You need something?..\n")
         slow_print("..I sell trinkets, 'magic' items etc etc you get it\n")
-        print("..I'm short on time. Hurry up now.")
+        print("..I'm short on time. Hurry up now.\n")
         print("[a]: Ask for information")
         print("[b]: Ask for magic items")
         answer3 = input("What do you need?\n")
@@ -417,6 +422,7 @@ def the_end():
     The End message
     """
     print()
+    time.sleep(2)
     print(f"This story has come to an end. Well done {p1.name}!")
     print("However, there's more to this story. Other paths to take.")
     print("Feel free to play again, and see how it ends next time\n")

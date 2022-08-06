@@ -16,6 +16,7 @@ Depending on the players choices, they might end up getting to play dice in a mi
 ![dice-screen](images/dice-act-pp3.PNG)  
 + The End  
 If the player manages to reach one of the endings they will be given a 'thank you for playing' message and the option to play again.  
+![the-end](images/the-end-pp3.PNG)
 + Choices  
 There's plenty of choices that changes how to story goes and depend on previous choices. There is two key elements that will affect the story depending on the players choices. The lucky dice and how you are introduced to Griff.  
 ### Road Map  
@@ -26,13 +27,44 @@ Future features might include a more fleshed out dice mini game, with score. Als
 
 ## Testing  
 *Tests included but are not limited to:*  
++ Tested both in Gitpods terminal and the mock terminal on Heroku. Also did additional testing in PyCharm.  
+
 + Playing through the game several times:  
     + Making the wrong decisions  
     + Making the wrong inputs  
     + Making the right inputs
     + Making the right decisions 
     + (table to be added)
-+ Tested both in Gitpods terminal and the mock terminal on Heroku. Also did additional testing in PyCharm.
+### Detailed Manual Testing:  
+> w = win.  
+> x = lose.  
+> o = loop until other input.  
+> ? = random chance w/x  
+> Does not count 'start new game' as a question. Answers start from 'answer voice'
+
+| Q1<br>A | Q2<br>A | Q3<br>A | Q4<br>A | Q5<br>A | Q6<br>A | Q7<br>A | Q8<br>A | Q9<br>A | Q10<br>A | Q11<br>A | Q12<br>A | Expected<br>Result | Actual<br>Result |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| yes | yes | yes | town | tavern | b | yes | no | ask | a | a | luck | W | W |
+| yes | yes | yes | town | tavern | b | yes | no | ask | a | a | spirit | x | x |
+| yes | yes | yes | town | tavern | b | yes | no | ask | a | b |  | w | w |
+| yes | yes | yes | town | tavern | b | yes | no | ask | b |  |  | x | x |
+| yes | yes | yes | town | tavern | b | yes | no | fight |  |  |  | x | x |
+| yes | yes | yes | town | tavern | b | yes | yes |  |  |  |  | o | o |
+| yes | yes | yes | town | tavern | b | no |  | ask | a | a | spirit | x | x |
+| yes | yes | yes | town | tavern | b | no |  | ask | a | b |  | w | w |
+| yes | yes | yes | town | tavern | b | no |  | ask | b |  |  | x | x |
+| yes | yes | yes | town | tavern | b | no |  | fight |  |  |  | x | x |
+| yes | yes | yes | town | tavern | a | yes |  | griff | a | a | griff | ? | ? |
+| yes | yes | yes | town | tavern | a | yes |  | griff | b | a | spirit | x | x |
+| yes | yes | yes | town | tavern | a | yes |  | griff | a | b |  | w | w |
+| yes | yes | yes | town | tavern | a | yes |  | fight |  |  |  | x | x |
+| yes | yes | yes | town | tavern | a | no |  |  |  |  |  | x | x |
+| yes | yes | yes | town | market |  |  |  |  |  |  |  | x | x |
+| yes | yes | yes | forest |  |  |  |  |  |  |  |  | o | o |
+| yes | yes | no |  |  |  |  |  |  |  |  |  | x | x |
+| yes | no |  |  |  |  |  |  |  |  |  |  | x | x |
+| no |  |  |  |  |  |  |  |  |  |  |  | x | x |
+
 
 ### Validation
 + The code goes through the [PEP8 Checker](http://pep8online.com/) without any issues.  

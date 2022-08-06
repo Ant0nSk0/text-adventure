@@ -1,31 +1,18 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Text Adventure Game
+This is a text-based choose-your-own-adventure game running in the terminal.  
+Players get to make decisions in the game by typing in their answers, each answer leading to a different outcome.  
+![mock-up](images/pp3-mockup.PNG)  
+## Features  
 
-Welcome Ant0nSk0,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
-
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
++ Game Start  
+When the programme is run, the intro screen shows, welcoming the player and ask them if they would like to play.  
+![intro-screen](images/intro-page-pp3.PNG)  
+Followed by a request for the player to enter their name.  
+![enter-name](images/name-pp3.PNG)  
+After that the game starts to tell the story and asking the players to make choices. Each answer will lead to a different outcome. Some choices makes the game progress and some ends in a game over. The game over screen asks the player if they want to restart.  
+![game-over](images/game-over-pp3.PNG)  
++ Dice mini game  
+Depending on the players choices, they might end up getting to play dice in a mini game halfway through the story.  
+![dice-screen](images/dice-act-pp3.PNG)  
++ The End  
+If the player manages to reach one of the endings they will be given a 'thank you for playing' message and the option to play again.

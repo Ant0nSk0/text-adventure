@@ -202,7 +202,7 @@ def act2():
                 print("A bat to the back and everything turns black")
                 death()
 
-        elif answer2.lower == "market":
+        elif answer2.lower() == "market":
             print()
             print("you went to the market\n")
             time.sleep(1)

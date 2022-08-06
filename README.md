@@ -28,13 +28,14 @@ Future features might include a more fleshed out dice mini game, with score. Als
 ## Testing  
 *Tests included but are not limited to:*  
 + Tested both in Gitpods terminal and the mock terminal on Heroku. Also did additional testing in PyCharm.  
++ Tested both on computer and mobile.
 
 + Playing through the game several times:  
     + Making the wrong decisions  
     + Making the wrong inputs  
     + Making the right inputs
     + Making the right decisions 
-    + (table to be added)
+    
 ### Detailed Manual Testing:  
 > w = win.  
 > x = lose.  

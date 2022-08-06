@@ -32,7 +32,7 @@ Future features might include a more fleshed out dice mini game, with score. Als
     + Making the right inputs
     + Making the right decisions 
     + (table to be added)
-+ Tested both in Gitpods terminal and the mock up terminal on Heroku. Also did additional testing in PyCharm.
++ Tested both in Gitpods terminal and the mock terminal on Heroku. Also did additional testing in PyCharm.
 
 ### Validation
 + The code goes through the [PEP8 Checker](http://pep8online.com/) without any issues.  
@@ -44,5 +44,21 @@ Future features might include a more fleshed out dice mini game, with score. Als
 + There is no currently known bugs left unfixed.  
 
 ## Deployment  
-This project was deployed onto Heroku. I did that by:  
-1. 
+This project was deployed onto Heroku using Code Institutes mock terminal. I did that by:  
+1. Going to the dashboard on Heroku.
+2. Clicking 'New' then 'Create new app'.
+3. Choosing a name for the app, setting region to Europe and clicking on 'Create'.
+3. Going to the Settings tab.
+4. Setting the config vars with PORT : 8000
+5. Add buildpacks 'Python' and 'Node.js' in that order.
+6. Going to the Deploy tab.
+7. Clicking on GitHub and Connect it.
+8. Search for this repository and connect to it.
+9. Activating Automatic and then Manually Deploy.
+10. Waiting for it to build, then clicking on 'View'.  
+
+Live link can be found here: https://textbased-adventure.herokuapp.com/  
+
+## Credits  
++ Code Institute for the deployment terminal
++ [Colorama](https://pypi.org/project/colorama/) for a bit of color.

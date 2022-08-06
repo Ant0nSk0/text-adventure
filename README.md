@@ -95,3 +95,6 @@ Live link can be found here: https://textbased-adventure.herokuapp.com/
 ## Credits  
 + Code Institute for the deployment terminal
 + [Colorama](https://pypi.org/project/colorama/) for a bit of color.
++ Road Map made with [Lucidchart](https://www.lucidchart.com/pages/)
++ Mock up made with [Techsini](http://techsini.com/multi-mockup/index.php)
++ Table made with [TablesGenerator](https://www.tablesgenerator.com/)
